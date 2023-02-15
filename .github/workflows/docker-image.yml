@@ -50,7 +50,7 @@ jobs:
 
     - name: build docker image
 
-      run: docker build . --file Dockerfile --tag ushasrishetty/to-do-app-assignment:${{ steps.date.outputs.date }}
+      run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/to-do-app-assignment:${{ steps.date.outputs.date }}
 
     - name: docker push
 
